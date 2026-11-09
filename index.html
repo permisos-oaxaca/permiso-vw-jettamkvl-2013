@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adeudo Tenencia</title>
+<style>
+    body { background-color: white; font-family: Arial, sans-serif; margin: 0; padding: 0;
+            display: flex; justify-content: center; height: 100%; }
+    .container { background-color: #fff; border-radius: 10px; padding: 20px;
+                  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); max-width: 700px; width: 100%; }
+    .container img { max-width: 100%; height: auto; display: block; margin: 0 auto;
+                      border-radius: 5px; margin-bottom: 10px; }
+    .labelest { font-size: 16px; font-weight: bold; color: #333; margin-bottom: 5px; display: block; }
+    .labelestR { font-size: 16px; font-weight: bold; color: red; margin-bottom: 5px; display: block; }
+    .contenedorreloj { text-align: center; }
+    .imagen-border { border: 2px solid black; border-radius: 20px; margin-bottom: 20px; }
+    .contenido-border { border: 2px solid #ccc; border-radius: 10px; padding: 10px; width: 300px; margin: auto; }
+    .labelest { display: block; font-weight: bold; margin-top: 10px; }
+    .responsive-img { max-width: 100%; height: auto; }
+    @media only screen and (min-width: 600px) {
+        .responsive-img { width: 100%; max-width: none; height: 100px; }
+    }
+</style>
+</head>
+<body>
+<div class='contenedor'><div class='imagen-border'><img src='logosmex/Oaxaca.png' class='responsive-img'><br><div id="contenedorreloj" class="contenedorreloj">8 DE NOVIEMBRE DEL 2026</div></div >
+<div class='contenido-border'><span class='labelestR'>DATOS DEL PERMISO PROVISIONAL PARA CIRCULAR SIN PLACAS Y TARJETAS DE CIRCULACIÓN DE SERVICIOS PARTICULAR VÁLIDO POR 30 DÍAS</span><span class='labelest'>Propietario:</span><div>JUAN JOSE MELCHOR CRUZ</div><span class='labelest'>Rfc:</span><div></div><span class='labelest'>Fecha de Expedicion:</span><div>08/11/2026</div><span class='labelest'>Vigencia del permiso:</span><div>07/12/2026</div><span class='labelest'>Marca:</span><div>volkswagen</div><span class='labelest'>Modelo:</span><div>CCC 188421</div><span class='labelest'>Año/Modelo:</span><div>2013</div><span class='labelest'>Color:</span><div>BLANCO CANDY</div><span class='labelest'>N° de serie:</span><div>3VW1W1AJ2DM313695</div><span class='labelest'>N° de motor:</span><div>CCC 188421</div></div></div>
+<script>
+    const fecha = new Date();
+    const dia = fecha.getDate();
+    const mes = fecha.getMonth() + 1;
+    const anio = fecha.getFullYear();
+    var meses = ['','ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+    document.getElementById("contenedorreloj").innerHTML = dia + " DE " + meses[mes] + " DEL " + anio;
+</script>
+</body>
+</html>
